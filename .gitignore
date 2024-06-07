@@ -96,7 +96,7 @@ __pypackages__/
 celerybeat-schedule
 celerybeat.pid
 *.sage.py
-.env
+root/.env
 env/
 venv/
 ENV/
@@ -112,3 +112,5 @@ dmypy.json
 .pyre/
 .pytype/
 cython_debug/
+__pycache__
+.env
