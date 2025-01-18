@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr.Mirmakhmudov's Blog</title>
-    <link rel="shortcut icon" href="/media/images/all_hp_logo.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="/media/images/owners/MrMirmakhmudov.jpg" type="image/x-icon">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -131,7 +131,7 @@
 
                 <h1 class="h1">
                     Hi, I'm <b>Abdulmajid.</b>
-                    <br>Web Developer
+                    <br>Software Developer
                 </h1><br><br>
 
                 <div class="btn-group">
@@ -145,7 +145,7 @@
 
                 <div class="pattern-bg"></div>
                 <div class="img-box">
-                    <img src="/media/images/Mirmakhmudov.png" style="border-radius:50%;" alt="Mr.Mirmakhmudov"
+                    <img src="/media/images/owners/authorpicture.jpg" style="border-radius:50%;" alt="Mr.Mirmakhmudov"
                          class="hero-img">
                 </div>
 
@@ -163,38 +163,38 @@
                 <h2 class="h2">Latest Blog Post</h2>
 
                 <div class="blog-card-group">
-                    {% for i in Post %}
+                    {% for posts in Post %}
                     <div class="blog-card">
 
                         <div class="blog-card-banner">
-                            <img src="{{ i.image.url }}"
-                                 alt="{{ i.image_alt }}"
+                            <img src="{{ posts.image.url }}"
+                                 alt="{{ posts.image_alt }}"
                                  width="250" class="blog-banner-img">
                         </div>
 
                         <div class="blog-content-wrapper">
 
-                            <button class="blog-topic text-tiny">{{ i.blog_name }}</button>
+                            <button class="blog-topic text-tiny">{{ posts.title }}</button>
 
                             <h3>
                                 <a href="#" class="h3">
-                                    {{ i.blog_topic }}
+                                    {{ posts.topic }}
                                 </a>
                             </h3>
 
-                            <p class="blog-text">{{ i.description }}</p>
+                            <p class="blog-text">{{ posts.description }}</p>
 
                             <div class="wrapper-flex">
 
                                 <div class="profile-wrapper">
-                                    <img src="{{ i.owner.image.url }}" alt="Mr.Mirmakhmudov" width="50">
+                                    <img src="{{ posts.owner.image.url }}" alt="Mr.Mirmakhmudov" width="50">
                                 </div>
 
                                 <div class="wrapper">
-                                    <a href="#" class="h4">{{ i.owner.name }}</a>
+                                    <a href="#" class="h4">{{ posts.owner.name }}</a>
 
                                     <p class="text-sm">
-                                        <time datetime="2022-01-17">{{ i.created_at }}</time>
+                                        <time datetime="2022-01-17">{{ posts.created_at }}</time>
                                         <span class="separator"></span>
                                     </p>
                                 </div>
@@ -377,7 +377,7 @@
     </div>
 
     <p class="copyright">
-        &copy; Copyright 2024 <a href="#">Mr.Mirmakhmudov's Blog</a>
+        &copy; Copyright 2025 <a href="#">Mr.Mirmakhmudov's Blog</a>
     </p>
 
 </footer>
