@@ -1,13 +1,20 @@
 {
-  "build": [{
+  "version": 2,
+  "builds": [
+    {
+      "src": "requirements.txt",
+      "use": "@vercel/python"
+    },
+    {
       "src": "root/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.9"
-      }
+      "use": "@vercel/python"
     }
   ],
+  "env": {
+    "DJANGO_SECRET_KEY": "your_secret_key",
+    "DJANGO_SETTINGS_MODULE": "root.settings",
+    "DATABASE_URL": ""
+  },
   "routes": [
     {
       "src": "/(.*)",
