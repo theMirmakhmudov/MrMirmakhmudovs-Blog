@@ -11,9 +11,9 @@
     }
   ],
   "env": {
-    "DJANGO_SECRET_KEY": "your_secret_key",
+    "DJANGO_SECRET_KEY": "Abdulmajid",
     "DJANGO_SETTINGS_MODULE": "root.settings",
-    "DATABASE_URL": ""
+    "DATABASE_URL": "postgres://postgres:mirmakhmudov16@localhost:5432/mirmakhmudovblog"
   },
   "routes": [
     {
